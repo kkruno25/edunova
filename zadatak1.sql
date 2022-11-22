@@ -1,8 +1,8 @@
 # Otvoriti CMD
-# Unesi D:\Programiranje\Xampp\mysql\bin\mysql -uroot < D:\Programiranje\javavjezbanje\edunova\SQL\zadatak1.sql
+# Unesi D:\Programiranje\Xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Programiranje\javavjezbanje\edunova\SQL\zadatak1.sql
 
 drop database if exists zadatak1;
-create database zadatak1;
+create database zadatak1 default charset utf8;
 use zadatak1;
 
 create table zupanija(
