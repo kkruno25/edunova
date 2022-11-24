@@ -52,8 +52,9 @@ values (null,'Pero','Perić');
 insert into zupan (sifra,ime,prezime)
 values (null,'Marko','Marić');
 
+#1
 insert into opcina (sifra,naziv,zupanija)
 values (null,'Osijek',1);
 
 insert into mjesto (sifra,naziv,opcina)
-values (null,'Slavonski brod',2);
+values (null,'Slavonski brod',1);
