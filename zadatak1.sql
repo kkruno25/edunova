@@ -36,24 +36,24 @@ alter table mjesto add foreign key (opcina) references opcina (sifra);
 
 
 #Inicijalni podatci
-# 1
-insert into zupanija (sifra,naziv)
-values (null,'Osječko Baranjska');
+#1
+insert into zupanija (sifra,naziv,zupan)
+values (null,'Osječko Baranjska',1);
 
-# 2
-insert into zupanija (sifra,naziv)
-values (null,'Slavonsko Brodska');
+#2
+insert into zupanija (sifra,naziv,zupan)
+values (null,'Slavonsko Brodska',2);
 
-# 1
+#1
 insert into zupan (sifra,ime,prezime)
 values (null,'Pero','Perić');
 
-# 2
+#2
 insert into zupan (sifra,ime,prezime)
 values (null,'Marko','Marić');
 
-insert into opcina (sifra,naziv)
-values (null,'Osijek');
+insert into opcina (sifra,naziv,zupanija)
+values (null,'Osijek',1);
 
-insert into mjesto (sifra,naziv)
-values (null,'Osijek');
+insert into mjesto (sifra,naziv,opcina)
+values (null,'Slavonski brod',2);
