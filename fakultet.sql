@@ -58,16 +58,16 @@ insert into rok(sifra,termin,ucionica,kolegij)
 values (null,'2022-10-15 14:00:00','Učionica 2',2);
 
 insert into rok(sifra,termin,ucionica,kolegij)
-values (null,'2022-10-07','Učionica 1',1);
+values (null,'2022-10-07 13:00:00','Učionica 1',1);
 
 insert into rok(sifra,termin,ucionica,kolegij)
-values (null,'2022-10-21','Učionica 3',1);
+values (null,'2022-10-21 14:00:00','Učionica 3',1);
 
 insert into rok(sifra,termin,ucionica,kolegij)
-values (null,'2022-10-05','Učionica 3',3);
+values (null,'2022-10-05 11:00:00','Učionica 3',3);
 
 insert into rok(sifra,termin,ucionica,kolegij)
-values (null,'2022-10-19','Učionica 4',3);
+values (null,'2022-10-19 09:00:00','Učionica 4',3);
 
 # 3 student
 insert into student(ime,prezime,email)
@@ -99,3 +99,8 @@ values
 insert into student_rok(rok,student)
 values
 (5,8),(5,9),(5,10),(5,11),(5,12);
+
+update rok set
+termin='2022-10-07 11:00:00'
+where sifra=3;
+
