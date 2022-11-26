@@ -1,5 +1,5 @@
 # Otvori CMD
-# Unesi D:\Programiranje\Xampp\mysql\bin\mysql -uroot < D:\Programiranje\javavjezbanje\edunova\SQL\firma.sql
+# Unesi D:\Programiranje\Xampp\mysql\bin\mysql -uroot < D:\Programiranje\javavjezbanje\edunova\SQL\SQL\firma.sql
 
 drop database if exists firma;
 create database firma;

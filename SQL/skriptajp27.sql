@@ -2,7 +2,7 @@
 # Izvođenje naredbi na serveru
 # Otvoriti CMD
 # Zaljepiti sljedeću naredbu bez prvoh hash znaka
-# D:\Programiranje\Xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Programiranje\javavjezbanje\edunova\SQL\skriptajp27.sql
+# D:\Programiranje\Xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Programiranje\javavjezbanje\edunova\SQL\SQL\skriptajp27.sql
 
 # primjer s razmakom
 #  c:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < "C:\Users\dell\Downloads\baze Za Vjezbanje\mjesta.sql"

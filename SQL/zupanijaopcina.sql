@@ -1,5 +1,5 @@
 # Otvoriti CMD
-# Unijeti D:\Programiranje\Xampp\mysql\bin\mysql -uroot < D:\Programiranje\javavjezbanje\edunova\SQL\zupanijaopcina.sql
+# Unijeti D:\Programiranje\Xampp\mysql\bin\mysql -uroot < D:\Programiranje\javavjezbanje\edunova\SQL\SQL\zupanijaopcina.sql
 
 drop database if exists zupanijaopcina;
 create database zupanijaopcina;

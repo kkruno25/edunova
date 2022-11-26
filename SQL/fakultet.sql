@@ -1,6 +1,6 @@
 # Otvoriti CMD
 # Unijeti sljedeci red bez (hash) znaka
-# D:\Programiranje\Xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Programiranje\javavjezbanje\edunova\SQL\fakultet.sql
+# D:\Programiranje\Xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Programiranje\javavjezbanje\edunova\SQL\SQL\fakultet.sql
 
 drop database if exists fakultet;
 create database fakultet default charset utf8;
