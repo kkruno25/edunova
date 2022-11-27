@@ -1,4 +1,5 @@
-﻿# Klijent pokrenuti s --default-character-set=utf8 
+﻿# Klijent pokrenuti s --default-character-set=utf8
+# D:\Programiranje\Xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < D:\Programiranje\javavjezbanje\edunova\SQL\SQL\knjiznica.sql
 drop database if exists knjiznica;
 create database knjiznica DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_general_ci;
 use knjiznica;
