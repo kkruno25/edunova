@@ -7,16 +7,16 @@ use zavrsnirad;
 
 create table vozilo(
     sifra int not null primary key auto_increment,
-    registracija varchar(50),
-    nosivost decimal(5,2),
-    tipvozila varchar(50)
+    registracija varchar(50) not null,
+    nosivost decimal(7,2),
+    tipvozila varchar(50) not null
 );
 
 create table gradiliste(
     sifra int not null primary key auto_increment,
-    adresa varchar(50),
-    narucenakolicinabetona decimal(5,2),
-    nacinistovara varchar(50)
+    adresa varchar(50) not null,
+    narucenakolicinabetona decimal(7,2) not null,
+    nacinistovara varchar(50) not null
 );
 
 create table odvoz(
@@ -25,22 +25,52 @@ create table odvoz(
     dolazaknagradiliste datetime,
     pocetakistovara datetime,
     krajistovara datetime,
-    kolicinabetona decimal(2,2),
-    vozilo int
+    kolicinabetona decimal(3,2) not null,
+    vozilo int not null
 );
 
 create table proizvodnja(
     sifra int not null primary key auto_increment,
-    pocetakproizvodnje datetime,
-    krajproizvodnje datetime,
-    proizvedenakolicina decimal(2,2),
-    tlacnacvrstoca varchar(6),
-    gradiliste int,
-    odvoz int
+    pocetakproizvodnje datetime not null,
+    krajproizvodnje datetime not null,
+    proizvedenakolicina decimal(4,2) not null,
+    tlacnacvrstoca varchar(6) not null,
+    gradiliste int not null,
+    odvoz int not null
 );
 
 # Vanjski ključevi
 alter table odvoz add foreign key (vozilo) references vozilo(sifra);
 alter table proizvodnja add foreign key (gradiliste) references gradiliste(sifra);
 alter table proizvodnja add foreign key (odvoz) references odvoz(sifra);
+
+# vozilo
+insert into vozilo(sifra,registracija,nosivost,tipvozila)
+values(null,'OS-578-HS','18000.00','Mikser');
+
+insert into vozilo(sifra,registracija,nosivost,tipvozila)
+values(null,'OS-678-JS','16800.00','Mikser');
+
+insert into vozilo(sifra,registracija,nosivost,tipvozila)
+values(null,'OS-778-KS','18000.00','Mikser');
+
+insert into vozilo(sifra,registracija,nosivost,tipvozila)
+values(null,'OS-123-LS',null,'Autopumpa');
+
+# gradiliste
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,nacinistovara)
+values(null,'Reisnerova 45,Osijek','14.50','Kipanje');
+
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,nacinistovara)
+values(null,'Strossmayerova 132,Osijek','76.00','Autopumpa');
+
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,nacinistovara)
+values(null,'Svačićeva 88,Osijek','19.00','Kran');
+
+# odvoz
+insert into odvoz(sifra,vrijemeodlaskasapogona,dolazaknagradiliste,pocetakistovara,krajistovara,kolicinabetona,vozilo)
+values(null,'2023-04-01 16:51:00','2023-04-01 17:06:00','2023-04-01 17:06:00','2023-04-01 17:41:00','7.5',1);
+
+insert into odvoz(sifra,vrijemeodlaskasapogona,dolazaknagradiliste,pocetakistovara,krajistovara,kolicinabetona,vozilo)
+values(null,'2023-04-01 17:21:00','2023-04-01 17:36:00','2023-04-01 17:41:00','2023-04-01 18:18:00','7.0',2);
 
