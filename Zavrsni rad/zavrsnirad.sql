@@ -16,6 +16,7 @@ create table gradiliste(
     sifra int not null primary key auto_increment,
     adresa varchar(50) not null,
     narucenakolicinabetona decimal(7,2) not null,
+    razredcvrstoce varchar(6) not null,
     nacinistovara varchar(50) not null
 );
 
@@ -34,7 +35,7 @@ create table proizvodnja(
     pocetakproizvodnje datetime not null,
     krajproizvodnje datetime not null,
     proizvedenakolicina decimal(4,2) not null,
-    tlacnacvrstoca varchar(6) not null,
+    razredcvrstoce varchar(6) not null,
     gradiliste int not null,
     odvoz int not null
 );
@@ -58,19 +59,25 @@ insert into vozilo(sifra,registracija,nosivost,tipvozila)
 values(null,'OS-123-LS',null,'Autopumpa');
 
 # gradiliste
-insert into gradiliste(sifra,adresa,narucenakolicinabetona,nacinistovara)
-values(null,'Reisnerova 45,Osijek','14.50','Kipanje');
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,razredcvrstoce,nacinistovara)
+values(null,'Reisnerova 45,Osijek','14.50','C16/20','Kipanje');
 
-insert into gradiliste(sifra,adresa,narucenakolicinabetona,nacinistovara)
-values(null,'Strossmayerova 132,Osijek','76.00','Autopumpa');
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,razredcvrstoce,nacinistovara)
+values(null,'Strossmayerova 132,Osijek','26.00','C30/37','Autopumpa');
 
-insert into gradiliste(sifra,adresa,narucenakolicinabetona,nacinistovara)
-values(null,'Svačićeva 88,Osijek','19.00','Kran');
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,razredcvrstoce,nacinistovara)
+values(null,'Svačićeva 88,Osijek','19.00','C25/30','Kran');
 
 # odvoz
 insert into odvoz(sifra,vrijemeodlaskasapogona,dolazaknagradiliste,pocetakistovara,krajistovara,kolicinabetona,vozilo)
-values(null,'2023-04-01 16:51:00','2023-04-01 17:06:00','2023-04-01 17:06:00','2023-04-01 17:41:00','7.5',1);
+values(null,'2023-04-01 16:51:00','2023-04-01 17:06:00','2023-04-01 17:06:00','2023-04-01 17:41:00','7.50',1);
 
 insert into odvoz(sifra,vrijemeodlaskasapogona,dolazaknagradiliste,pocetakistovara,krajistovara,kolicinabetona,vozilo)
-values(null,'2023-04-01 17:21:00','2023-04-01 17:36:00','2023-04-01 17:41:00','2023-04-01 18:18:00','7.0',2);
+values(null,'2023-04-01 17:21:00','2023-04-01 17:36:00','2023-04-01 17:41:00','2023-04-01 18:18:00','7.00',2);
 
+# proizvodnja
+insert into proizvodnja(sifra,pocetakproizvodnje,krajproizvodnje,proizvedenakolicina,razredcvrstoce,gradiliste,odvoz)
+values(null,'2023-04-01 16:36:00','2023-04-01 16:46:00','7.50','C16/20',1,1);
+
+insert into proizvodnja(sifra,pocetakproizvodnje,krajproizvodnje,proizvedenakolicina,razredcvrstoce,gradiliste,odvoz)
+values(null,'2023-04-01 17:06:00','2023-04-01 17:16:00','7.00','C16/20',1,2);
