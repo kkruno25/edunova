@@ -16,7 +16,7 @@ create table gradiliste(
     sifra int not null primary key auto_increment,
     adresa varchar(50) not null,
     narucenakolicinabetona decimal(7,2) not null,
-    razredcvrstoce varchar(6) not null,
+    narucenrazredcvrstoce varchar(6) not null,
     nacinistovara varchar(50) not null
 );
 
@@ -59,13 +59,13 @@ insert into vozilo(sifra,registracija,nosivost,tipvozila)
 values(null,'OS-123-LS',null,'Autopumpa');
 
 # gradiliste
-insert into gradiliste(sifra,adresa,narucenakolicinabetona,razredcvrstoce,nacinistovara)
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,narucenrazredcvrstoce,nacinistovara)
 values(null,'Reisnerova 45,Osijek','14.50','C16/20','Kipanje');
 
-insert into gradiliste(sifra,adresa,narucenakolicinabetona,razredcvrstoce,nacinistovara)
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,narucenrazredcvrstoce,nacinistovara)
 values(null,'Strossmayerova 132,Osijek','26.00','C30/37','Autopumpa');
 
-insert into gradiliste(sifra,adresa,narucenakolicinabetona,razredcvrstoce,nacinistovara)
+insert into gradiliste(sifra,adresa,narucenakolicinabetona,narucenrazredcvrstoce,nacinistovara)
 values(null,'Svačićeva 88,Osijek','19.00','C25/30','Kran');
 
 # odvoz
