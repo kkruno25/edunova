@@ -2,7 +2,7 @@ package vjezbanje;
 
 import javax.swing.JOptionPane;
 
-public class Z0 {
+public class TablicaMnozenja {
 
 //	Kreiraj program koji će koristeći for petlje automatizirati ispis tablice množenja u ovom obliku:
 //		-------------------------------
@@ -26,25 +26,27 @@ public class Z0 {
 
 	public static void main(String[] args) {
 
-		for (int i = 0; i < 31; i++) {
+		int f[] = new int[32];
+
+		for (int i = 0; i < f.length; i++) {
 			System.out.print("-");
 		}
 
-		System.out.println("\n: : :  TABLICA  MNOZENJA  : : :");
+		System.out.println("\n : : :  TABLICA  MNOZENJA  : : :");
 
-		for (int i = 0; i < 31; i++) {
+		for (int i = 0; i < f.length; i++) {
 			System.out.print("-");
 		}
 
-		System.out.print("\n * |");
+		System.out.print("\n  * |");
 
 		for (int i = 1; i < 10; i++) {
-			System.out.print("  " + i);
+			System.out.printf("%3d", i);
 
 		}
 		System.out.println();
 
-		for (int i = 0; i < 31; i++) {
+		for (int i = 0; i < f.length; i++) {
 			System.out.print("-");
 		}
 		System.out.println();
@@ -52,25 +54,22 @@ public class Z0 {
 		int a[][] = new int[10][10];
 
 		for (int b = 1; b < 10; b++) {
-			System.out.print(" " + b + " |");
+			System.out.printf("%3d |", b);
 			for (int c = 1; c < 10; c++) {
-				if (b * c <= 9) {
-					System.out.print("  " + b * c);
-				} else {
-					System.out.print(" " + b * c);
-				}
+				System.out.printf("%3d", (b * c));
 
 			}
 			System.out.println();
 
 		}
-		for (int i = 0; i < 31; i++) {
+		for (int i = 0; i < f.length; i++) {
 			System.out.print("-");
 		}
+		System.out.println();
 
-		System.out.println("\n:  :  :  :  :  :  :by Krunoslav");
+		System.out.printf("%32s\n", ": : : : : : : : : : by Krunoslav");
 
-		for (int i = 0; i < 31; i++) {
+		for (int i = 0; i < f.length; i++) {
 			System.out.print("-");
 		}
 	}

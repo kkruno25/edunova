@@ -2,7 +2,7 @@ package vjezbanje;
 
 import javax.swing.JOptionPane;
 
-public class ZZ1 {
+public class ZZ01 {
 
 	// Kreirati program koji unosi 24 broja, ispisuje njihov zbroj,
 	// najmanji i najveći uneseni broj.
